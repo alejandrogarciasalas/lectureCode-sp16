@@ -69,7 +69,12 @@ public class IntList {
       * each element incremented by x. Not allowed to use
       * the 'new' keyword. */
     public static IntList dincrList(IntList L, int x) {
-        /* Your code here. */
+        if(L.tail == null){
+            L.head += x;
+        } else {
+            L.head += x;
+            dincrList(L.tail, x);
+        }
         return L;
     }    
 
