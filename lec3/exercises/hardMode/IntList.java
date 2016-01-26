@@ -45,7 +45,11 @@ public class IntList {
     /** Returns the Intlist as a string. Automatically called
       * whenever you try to print an IntList. */
     public String toString() {
-
+        if (tail == null) {
+            return Integer.toString(head);
+        } else {
+            return Integer.toString(head) + "," + tail.toString();
+        }
     }
 
     /** Returns an IntList identical to L, but with
