@@ -13,8 +13,11 @@ public class IntList {
 
     /** Retuns the size of this IntList */
     public int size() {
-        /* your code here */       
-        return 0; 
+        if (tail == null){
+            return 1;
+        } else {
+            return 1 + tail.size();
+        }
     }
 
     /** Returns the size of this IntList. */
