@@ -56,8 +56,13 @@ public class IntList {
       * each element incremented by x. L is not allowed
       * to change. */
     public static IntList incrList(IntList L, int x) {
-        /* Your code here. */
-        return L;        
+        IntList newL;
+        if (L.tail == null) {
+            newL = new IntList(L.head += x, null);
+        } else {
+            newL = new IntList(L.head += x, incrList(L.tail, x));
+        }
+        return newL;     
     }
 
     /** Returns an IntList identical to L, but with
