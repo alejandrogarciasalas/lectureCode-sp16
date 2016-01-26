@@ -22,23 +22,30 @@ public class IntList {
 
     /** Returns the size of this IntList. */
     public int iterativeSize() {
-        /* your code here */
-        return 0;
+        IntList p = this;
+        listSize = 0;
+        while (p.tail != null){
+            listSize++;
+            p = p.tail;
+        }
+        return listSize;
     }
 
     /** In class exercise 1: 
       * Returns ith item of this IntList. For 
       * simplicity, assume the item exists. */
     public int get(int i) {
-        return 0;
-        /** your code here */
+        if (i == 0) {
+            return head;
+        } else {
+            return tail.get(i - 1);
+        }
     }
 
     /** Returns the Intlist as a string. Automatically called
       * whenever you try to print an IntList. */
     public String toString() {
-        /* your code here */
-        return null;
+
     }
 
     /** Returns an IntList identical to L, but with
