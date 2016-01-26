@@ -7,7 +7,8 @@ public class IntList {
     public IntList tail;
 
     public IntList(int h, IntList t) {
-        /* your code here */
+        h = head;
+        tail = t;
     }
 
     /** Retuns the size of this IntList */
